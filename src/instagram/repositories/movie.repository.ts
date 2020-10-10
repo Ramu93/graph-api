@@ -14,8 +14,8 @@ export class MovieRepository {
   ) {}
 
   async findAll(): Promise<any> {
-    return this.persistenceManager.getOne<any>(
-      new QuerySpecification(`MATCH (n:Movie) RETURN n LIMIT 25`),
+    return this.persistenceManager.query<any>(
+      new QuerySpecification(`MATCH (n) RETURN n`),
     );
   }
 }
