@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { InstagramController } from './instagram.controller';
-import { ProfileRepository } from './repositories/profile.repository';
+import { UserRepository } from './repositories/user.repository';
 
 @Module({
   controllers: [InstagramController],
-  providers: [ProfileRepository],
+  providers: [UserRepository],
 })
 export class InstagramModule {}
