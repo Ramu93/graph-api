@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { InstagramController } from './instagram.controller';
-import { UserRepository } from './repositories/user.repository';
+import { UserRepository } from '../common/repositories/user.repository';
 
 @Module({
   controllers: [InstagramController],

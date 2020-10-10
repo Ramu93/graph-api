@@ -4,5 +4,4 @@ export interface User {
     full_name: string;
     id: string;
     is_business_account: boolean;
-    edge_followed_by: number,
 }
