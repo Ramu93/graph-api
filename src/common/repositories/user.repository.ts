@@ -22,7 +22,7 @@ export class UserRepository {
   async findOne(username: string): Promise<UserDto> {
     return await this.persistenceManager.getOne<UserDto>(
       new QuerySpecification(
-        `MATCH (user:User {username: "${username}"}) RETURN user LIMIT 1`,
+        `MATCH (user:User {username: "${username}"}) RETURN user`,
       ),
     );
   }
