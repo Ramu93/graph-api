@@ -3,7 +3,6 @@
 </p>
 
 [travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
 [linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
 
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
