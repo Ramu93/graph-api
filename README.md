@@ -1,13 +1,3 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
-
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
 ## Graph Database Prototype
 
 Task description:
@@ -55,6 +45,8 @@ INSTAGRAM_PASSWORD=<YOUR-INSTAGRAM-PASSWORD>
 ````bash
 # development
 $ npm run test:e2e
+````
+
 
 ## Running the app
 
@@ -96,7 +88,3 @@ Other endpoints:
 # get one user from local database
 http://localhost:3000/local/users/<IMSTAGRAM-USERNAME>
 ```
-
-## Stay in touch
-
-- Author - [Ramu Ramasamy]
