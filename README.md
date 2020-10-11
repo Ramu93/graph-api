@@ -44,6 +44,12 @@ INSTAGRAM_PASSWORD=<YOUR-INSTAGRAM-PASSWORD>
 
 ```
 
+## Testing the app
+
+```bash
+# development
+$ npm run test:e2e
+
 ## Running the app
 
 ```bash
@@ -75,7 +81,7 @@ http://localhost:3000/instagram/follows/<INSTAGRAM-USERID>
 
 ```bash
 # fetch followers of the user from the local database
-http://localhost:3000/local/userWithFollowers/<INSTAGRAM-USERID>
+http://localhost:3000/local/follows/<INSTAGRAM-USERID>
 ```
 
 Other endpoints:
