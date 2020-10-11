@@ -35,6 +35,7 @@ $ npm install
 ## Environment Variables
 
 - Rename the .env.sample file to .env
+- Update the database name/password if you have any.
 - Update the following entries.
 
 ```bash
