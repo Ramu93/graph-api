@@ -26,6 +26,14 @@ export class UserRepository {
     );
   }
 
+  async findOneWithFollowers(userId: number): Promise<any> {
+    return await this.persistenceManager.query<any>(
+      new QuerySpecification(
+        `MATCH (user: User { id: ${userId} })<-[:FOLLOWS]-(follower: User) RETURN user, follower`,
+      ),
+    );
+  }
+
   @Transactional()
   async save(user: UserDto): Promise<void> {
     await this.neo4jSave(user);

@@ -11,7 +11,11 @@ export class LocalService {
   }
 
   async getOneUser(username: string): Promise<UserDto> {
-    const user: UserDto = await this.userRepository.findOne(username);
-    return user;
+    return await this.userRepository.findOne(username);
+  }
+
+  async getOneWithFollowers(userId: number): Promise<UserDto[]> {
+    const data = await this.userRepository.findOneWithFollowers(userId);
+    return data.map(ele => ele[1])
   }
 }
