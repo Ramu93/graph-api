@@ -32,6 +32,12 @@ Tools which could be helpful:
 $ npm install
 ```
 
+## Prerequisites
+
+Before running the application you need to download and install Neo4J community server or Neo4J Desktop (preferred). Create a database and update the entries in the .env file (Like passsword, database name/passsword. Usually database name would be 'neo4j').
+
+Start the database in the Neo4J project view.
+
 ## Environment Variables
 
 - Rename the .env.sample file to .env
@@ -46,7 +52,7 @@ INSTAGRAM_PASSWORD=<YOUR-INSTAGRAM-PASSWORD>
 
 ## Testing the app
 
-```bash
+````bash
 # development
 $ npm run test:e2e
 
@@ -56,7 +62,7 @@ $ npm run test:e2e
 # development
 $ npm run start
 
-```
+````
 
 ## Endpoints
 
