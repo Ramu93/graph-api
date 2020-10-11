@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { UserDto } from 'src/common/dtos/user.dto';
-import { UserRepository } from 'src/common/repositories/user.repository';
+import { UserDto } from '../common/dtos/user.dto';
+import { UserRepository } from '../common/repositories/user.repository';
 
 @Injectable()
 export class LocalService {

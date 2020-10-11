@@ -16,7 +16,7 @@ export class LocalController {
     return await this.localService.getOneUser(param.username);
   }
 
-  @Get('/userWithFollowers/:userId')
+  @Get('/follows/:userId')
   async getOneWithFollowers(@Param() param: { userId: number }): Promise<UserDto[]> {
     return await this.localService.getOneWithFollowers(param.userId);
   }
