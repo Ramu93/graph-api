@@ -1,19 +1,18 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { UserDto } from 'src/common/dtos/user.dto';
-import { UserRepository } from 'src/common/repositories/user.repository';
+import { LocalService } from './local.service';
 
 @Controller('local')
 export class LocalController {
-  constructor(private readonly userRepository: UserRepository) {}
+  constructor(private readonly localService: LocalService) {}
 
   @Get('/users')
   async getUsers(): Promise<UserDto[]> {
-    return this.userRepository.findAll();
+    return this.localService.getUsers();
   }
 
   @Get('/users/:username')
-  async getOneUsers(@Param() param: { username: string }): Promise<UserDto> {
-    const user: UserDto = await this.userRepository.findOne(param.username);
-    return user;
+  async getOneUser(@Param() param: { username: string }): Promise<UserDto> {
+    return await this.localService.getOneUser(param.username);
   }
 }

@@ -2,10 +2,12 @@ import { IsOptional } from "class-validator";
 import { User } from "../interfaces/user.interface";
 
 export class UserDto {
+    readonly id: string;
     readonly username: string;
     readonly full_name: string;
-    readonly id: string;
+    @IsOptional()
     readonly biography: string;
+    @IsOptional()
     readonly is_business_account: boolean;
 
     constructor(user: User){
