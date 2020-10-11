@@ -32,6 +32,17 @@ Tools which could be helpful:
 $ npm install
 ```
 
+## Environment Variables
+
+- Rename the .env.sample file to .env
+- Update the following entries.
+
+```bash
+INSTAGRAM_USERNAME=<YOUR-INSTAGRAM-USERNAME>
+INSTAGRAM_PASSWORD=<YOUR-INSTAGRAM-PASSWORD>
+
+```
+
 ## Running the app
 
 ```bash
@@ -40,9 +51,38 @@ $ npm run start
 
 ```
 
-## Support
+## Endpoints
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Execute the following endpoints sequentially in order to fetch data using Instagram API and save it to database before viewing it.
+
+```bash
+# fetch and save user to the local database
+http://localhost:3000/instagram/user/<IMSTAGRAM-USERNAME>
+```
+
+```bash
+# get all users from local database
+http://localhost:3000/local/users
+```
+
+Note: INSTAGRAM-USERID is exactly the same value as the id field from the previous endpoint.
+
+```bash
+# fetch and save followers of the user to the local database
+http://localhost:3000/instagram/follows/<INSTAGRAM-USERID>
+```
+
+```bash
+# fetch followers of the user from the local database
+http://localhost:3000/local/userWithFollowers/<INSTAGRAM-USERID>
+```
+
+Other endpoints:
+
+```bash
+# get one user from local database
+http://localhost:3000/local/users/<IMSTAGRAM-USERNAME>
+```
 
 ## Stay in touch
 
